@@ -103,6 +103,26 @@
       </div>
       <div class="scene-stage">
         <canvas id="deploymentScene" aria-label="部署设备后的三维效果场景"></canvas>
+        <div class="scene-fallback" id="sceneFallback" aria-label="备用三维部署效果">
+          <div class="fallback-world">
+            <div class="fallback-floor"></div>
+            <div class="fallback-row row-it-a">
+              <span>ITFC-A</span><span>ITFC-B</span><span>ITFC-C</span><span>ITFC-D</span><span>ITFC-E</span><span>ITFC-F</span>
+            </div>
+            <div class="fallback-row row-it-b">
+              <span>ITFC-M/N</span><span>RPP</span><span>RPP</span><span>RPP</span><span>RPP</span><span>RPP</span>
+            </div>
+            <div class="fallback-row row-cool">
+              <span>COFC-A</span><span>COFC-B</span><span>COFC-C</span><span>COFC-D</span><span>COFC-E</span><span>COFC-F</span>
+            </div>
+            <div class="fallback-row row-power">
+              <span>TRFC-01</span><span>TRFC-02</span><span>HVFC</span><span>BTFC</span><span>PAFC</span>
+            </div>
+            <div class="fallback-tray tray-main"></div>
+            <div class="fallback-tray tray-cross"></div>
+          </div>
+          <p>备用 3D 视图已显示；若网络可访问 Three.js，页面会自动切换为可旋转 3D 场景。</p>
+        </div>
         <div class="scene-overlay">
           <div>
             <strong>1F Strong Power Deployment</strong>
@@ -262,6 +282,14 @@
   </footer>
 
   <script src="script.js"></script>
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.166.1/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.166.1/examples/jsm/"
+      }
+    }
+  </script>
   <script type="module" src="scene.js"></script>
 </body>
 </html>

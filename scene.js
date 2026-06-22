@@ -1,9 +1,12 @@
-import * as THREE from "https://unpkg.com/three@0.166.1/build/three.module.js";
-import { OrbitControls } from "https://unpkg.com/three@0.166.1/examples/jsm/controls/OrbitControls.js";
+import * as THREE from "three";
+import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 
 const canvas = document.getElementById("deploymentScene");
 
 if (canvas) {
+  const fallback = document.getElementById("sceneFallback");
+  if (fallback) fallback.hidden = true;
+
   const scene = new THREE.Scene();
   scene.background = new THREE.Color(0x101820);
   scene.fog = new THREE.Fog(0x101820, 58, 145);
