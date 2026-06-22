@@ -312,6 +312,12 @@ main {
   width: 100%;
   height: min(74vh, 760px);
   min-height: 540px;
+  cursor: grab;
+  touch-action: none;
+}
+
+.scene-stage canvas:active {
+  cursor: grabbing;
 }
 
 .scene-fallback {
@@ -321,6 +327,13 @@ main {
   place-items: center;
   padding: 72px 24px 58px;
   background: radial-gradient(circle at 50% 25%, rgba(45, 117, 159, 0.24), rgba(15, 23, 32, 0.78) 44%, #101820 100%);
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+}
+
+.scene-fallback:active {
+  cursor: grabbing;
 }
 
 .scene-fallback[hidden] {
@@ -332,7 +345,8 @@ main {
   width: min(960px, 92vw);
   height: 430px;
   transform-style: preserve-3d;
-  transform: rotateX(62deg) rotateZ(-34deg);
+  transform: rotateX(var(--fallback-x, 62deg)) rotateZ(var(--fallback-z, -34deg));
+  transition: transform 80ms linear;
 }
 
 .fallback-floor {

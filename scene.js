@@ -21,12 +21,16 @@ if (canvas) {
   camera.position.set(48, 42, 62);
 
   const controls = new OrbitControls(camera, canvas);
+  controls.enabled = true;
+  controls.enableRotate = true;
   controls.enableDamping = true;
   controls.dampingFactor = 0.08;
+  controls.rotateSpeed = 0.82;
   controls.target.set(2, 1, 0);
   controls.maxPolarAngle = Math.PI * 0.48;
   controls.minDistance = 32;
   controls.maxDistance = 120;
+  canvas.style.touchAction = "none";
 
   const hemi = new THREE.HemisphereLight(0xd9f1ff, 0x1b2630, 2.4);
   scene.add(hemi);
