@@ -18,6 +18,7 @@
     </a>
     <nav class="nav" aria-label="页面导航">
       <a href="#drawing">图纸</a>
+      <a href="#deployment">3D</a>
       <a href="#systems">系统</a>
       <a href="#quote">报价</a>
       <a href="#confirm">确认</a>
@@ -89,6 +90,38 @@
         <span>93 个图层</span>
         <span>814 条文字对象</span>
         <span>402 个块实例</span>
+      </div>
+    </section>
+
+    <section class="section deployment-section" id="deployment">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">部署效果</p>
+          <h2>设备部署后的 3D 效果</h2>
+        </div>
+        <p>该 3D 场景按图纸识别结果抽象表达方舱、主配电、桥架和设备组的空间关系，用于方案沟通和评审确认。</p>
+      </div>
+      <div class="scene-stage">
+        <canvas id="deploymentScene" aria-label="部署设备后的三维效果场景"></canvas>
+        <div class="scene-overlay">
+          <div>
+            <strong>1F Strong Power Deployment</strong>
+            <span>ITFC · COFC · TRFC · BTFC · PAFC · Cable Tray</span>
+          </div>
+          <div class="scene-controls" role="group" aria-label="3D 视角控制">
+            <button type="button" data-view="overview">总览</button>
+            <button type="button" data-view="power">电源</button>
+            <button type="button" data-view="it">IT 方舱</button>
+            <button type="button" data-view="cooling">冷却配电</button>
+          </div>
+        </div>
+        <div class="scene-legend" aria-label="3D 图例">
+          <span><i class="lg-it"></i>IT 方舱</span>
+          <span><i class="lg-cool"></i>冷却&配电</span>
+          <span><i class="lg-power"></i>变配电</span>
+          <span><i class="lg-battery"></i>锂电/巴拿马</span>
+          <span><i class="lg-tray"></i>桥架</span>
+        </div>
       </div>
     </section>
 
@@ -229,5 +262,6 @@
   </footer>
 
   <script src="script.js"></script>
+  <script type="module" src="scene.js"></script>
 </body>
 </html>

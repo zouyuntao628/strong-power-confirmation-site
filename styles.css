@@ -285,6 +285,116 @@ main {
   height: auto;
 }
 
+.deployment-section {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  padding-left: max(24px, calc((100vw - 1240px) / 2));
+  padding-right: max(24px, calc((100vw - 1240px) / 2));
+  background: #0f1720;
+  color: #f8fafc;
+}
+
+.deployment-section .section-head p:last-child {
+  color: #a9b7c8;
+}
+
+.scene-stage {
+  position: relative;
+  min-height: min(74vh, 760px);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  overflow: hidden;
+  background: #111827;
+}
+
+.scene-stage canvas {
+  display: block;
+  width: 100%;
+  height: min(74vh, 760px);
+  min-height: 540px;
+}
+
+.scene-overlay {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  right: 18px;
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  pointer-events: none;
+}
+
+.scene-overlay strong,
+.scene-overlay span {
+  display: block;
+}
+
+.scene-overlay strong {
+  font-size: 18px;
+}
+
+.scene-overlay span {
+  color: #b9c6d5;
+  font-size: 13px;
+}
+
+.scene-controls {
+  display: flex;
+  gap: 8px;
+  pointer-events: auto;
+}
+
+.scene-controls button {
+  min-height: 36px;
+  padding: 0 12px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 7px;
+  background: rgba(15, 23, 32, 0.72);
+  color: #f8fafc;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.scene-controls button:hover {
+  background: rgba(29, 95, 153, 0.92);
+}
+
+.scene-legend {
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  bottom: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.scene-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 32px;
+  padding: 0 10px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 7px;
+  background: rgba(15, 23, 32, 0.72);
+  color: #e5edf6;
+  font-size: 13px;
+}
+
+.scene-legend i {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+}
+
+.lg-it { background: #4f8cff; }
+.lg-cool { background: #26c6a8; }
+.lg-power { background: #f59e0b; }
+.lg-battery { background: #ef476f; }
+.lg-tray { background: #d7dee8; }
+
 .note-strip {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -617,6 +727,15 @@ textarea {
   .summary-card {
     position: static;
   }
+
+  .scene-overlay {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .scene-controls {
+    flex-wrap: wrap;
+  }
 }
 
 @media (max-width: 560px) {
@@ -635,6 +754,11 @@ textarea {
 
   .quote-controls {
     width: 100%;
+  }
+
+  .scene-stage canvas {
+    height: 620px;
+    min-height: 620px;
   }
 }
 
