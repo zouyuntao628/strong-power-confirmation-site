@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>1楼强电设计确认网站</title>
-  <meta name="description" content="1楼强电设计、工程量、报价和复核事项确认页面">
+  <meta name="description" content="1楼强电设计、工程量、报价和复核事项确认页面" data-i18n-meta="description">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,17 +12,22 @@
     <a class="brand" href="#overview" aria-label="返回概览">
       <span class="brand-mark" aria-hidden="true">E</span>
       <span>
-        <strong>1楼强电确认</strong>
-        <small>方案设计 · 工程量 · 报价</small>
+        <strong data-i18n="brand.title">1楼强电确认</strong>
+        <small data-i18n="brand.sub">方案设计 · 工程量 · 报价</small>
       </span>
     </a>
     <nav class="nav" aria-label="页面导航">
-      <a href="#drawing">图纸</a>
+      <a href="#drawing" data-i18n="nav.drawing">图纸</a>
       <a href="#deployment">3D</a>
-      <a href="#systems">系统</a>
-      <a href="#quote">报价</a>
-      <a href="#confirm">确认</a>
+      <a href="#systems" data-i18n="nav.systems">系统</a>
+      <a href="#quote" data-i18n="nav.quote">报价</a>
+      <a href="#confirm" data-i18n="nav.confirm">确认</a>
     </nav>
+    <div class="lang-switch" role="group" aria-label="Language">
+      <button type="button" data-lang="zh">中文</button>
+      <button type="button" data-lang="fr">Fr</button>
+      <button type="button" data-lang="uz">O'z</button>
+    </div>
     <button class="icon-button" id="printBtn" type="button" aria-label="打印或另存为 PDF" title="打印或另存为 PDF">
       <span aria-hidden="true">⎙</span>
     </button>
@@ -31,12 +36,12 @@
   <main>
     <section class="hero" id="overview">
       <div class="hero-copy">
-        <p class="eyebrow">Rhino 3DM 图纸解析 · 2026-06-22</p>
-        <h1>1楼强电设计与报价确认</h1>
-        <p class="lead">基于《1楼 -调整设备间距.3dm》提取的方舱、设备、桥架、入户和配电标注，整理为可确认的网页版本。所有确认状态保存在当前浏览器，可导出确认摘要。</p>
+        <p class="eyebrow" data-i18n="hero.eyebrow">Rhino 3DM 图纸解析 · 2026-06-22</p>
+        <h1 data-i18n="hero.title">1楼强电设计与报价确认</h1>
+        <p class="lead" data-i18n="hero.lead">基于《1楼 -调整设备间距.3dm》提取的方舱、设备、桥架、入户和配电标注，整理为可确认的网页版本。所有确认状态保存在当前浏览器，可导出确认摘要。</p>
         <div class="hero-actions">
-          <a class="button primary" href="#confirm">开始确认</a>
-          <a class="button secondary" href="#quote">查看报价</a>
+          <a class="button primary" href="#confirm" data-i18n="hero.start">开始确认</a>
+          <a class="button secondary" href="#quote" data-i18n="hero.quote">查看报价</a>
         </div>
       </div>
       <div class="status-panel" aria-label="确认进度">
@@ -44,62 +49,62 @@
           <span id="progressValue">0%</span>
         </div>
         <div>
-          <h2>确认进度</h2>
-          <p><span id="confirmedCount">0</span>/<span id="totalCount">0</span> 项已确认</p>
-          <p class="muted">未确认项会保留在“待复核”清单中。</p>
+          <h2 data-i18n="progress.title">确认进度</h2>
+          <p><span id="confirmedCount">0</span>/<span id="totalCount">0</span> <span data-i18n="progress.confirmed">项已确认</span></p>
+          <p class="muted" data-i18n="progress.note">未确认项会保留在“待复核”清单中。</p>
         </div>
       </div>
     </section>
 
     <section class="metrics" aria-label="项目关键指标">
       <article>
-        <span>IT 方舱</span>
+        <span data-i18n="metric.it">IT 方舱</span>
         <strong>12 套</strong>
-        <small>ITFC-A 至 F，M/N 两列</small>
+        <small data-i18n="metric.itSub">ITFC-A 至 F，M/N 两列</small>
       </article>
       <article>
-        <span>冷却&配电方舱</span>
+        <span data-i18n="metric.cooling">冷却&配电方舱</span>
         <strong>6 套</strong>
-        <small>COFC-A01 至 F01</small>
+        <small data-i18n="metric.coolingSub">COFC-A01 至 F01</small>
       </article>
       <article>
-        <span>变压器</span>
+        <span data-i18n="metric.transformer">变压器</span>
         <strong>2 台</strong>
-        <small>TRFC-01/02，各 1600kVA</small>
+        <small data-i18n="metric.transformerSub">TRFC-01/02，各 1600kVA</small>
       </article>
       <article>
-        <span>推荐预算</span>
-        <strong>2310 万</strong>
-        <small>方案阶段，不含设备本体</small>
+        <span data-i18n="metric.budget">推荐预算</span>
+        <strong data-i18n="metric.budgetValue">2310 万</strong>
+        <small data-i18n="metric.budgetSub">方案阶段，不含设备本体</small>
       </article>
     </section>
 
     <section class="section" id="drawing">
       <div class="section-head">
         <div>
-          <p class="eyebrow">图纸可视化</p>
-          <h2>一层设备与方舱平面示意</h2>
+          <p class="eyebrow" data-i18n="drawing.eyebrow">图纸可视化</p>
+          <h2 data-i18n="drawing.title">一层设备与方舱平面示意</h2>
         </div>
-        <p>示意图由 3DM 中墙体、门、方舱、设备、桥架和电源入户相关图层抽取生成，用于会议沟通和确认。</p>
+        <p data-i18n="drawing.desc">示意图由 3DM 中墙体、门、方舱、设备、桥架和电源入户相关图层抽取生成，用于会议沟通和确认。</p>
       </div>
       <div class="plan-shell">
         <img src="assets/plan.svg" alt="一层强电方舱与设备简化平面图">
       </div>
       <div class="note-strip">
-        <span>已读取 72178 个模型对象</span>
-        <span>93 个图层</span>
-        <span>814 条文字对象</span>
-        <span>402 个块实例</span>
+        <span data-i18n="drawing.obj">已读取 72178 个模型对象</span>
+        <span data-i18n="drawing.layers">93 个图层</span>
+        <span data-i18n="drawing.texts">814 条文字对象</span>
+        <span data-i18n="drawing.blocks">402 个块实例</span>
       </div>
     </section>
 
     <section class="section deployment-section" id="deployment">
       <div class="section-head">
         <div>
-          <p class="eyebrow">部署效果</p>
-          <h2>设备部署后的 3D 效果</h2>
+          <p class="eyebrow" data-i18n="deployment.eyebrow">部署效果</p>
+          <h2 data-i18n="deployment.title">设备部署后的 3D 效果</h2>
         </div>
-        <p>该 3D 场景按图纸识别结果抽象表达方舱、主配电、桥架和设备组的空间关系，用于方案沟通和评审确认。</p>
+        <p data-i18n="deployment.desc">该 3D 场景按图纸识别结果抽象表达方舱、主配电、桥架和设备组的空间关系，用于方案沟通和评审确认。</p>
       </div>
       <div class="scene-stage">
         <canvas id="deploymentScene" aria-label="部署设备后的三维效果场景"></canvas>
@@ -107,21 +112,21 @@
           <div class="fallback-world">
             <div class="fallback-floor"></div>
             <div class="fallback-row row-it-a">
-              <span>ITFC-A</span><span>ITFC-B</span><span>ITFC-C</span><span>ITFC-D</span><span>ITFC-E</span><span>ITFC-F</span>
+              <span><b>ITFC-A</b><i></i></span><span><b>ITFC-B</b><i></i></span><span><b>ITFC-C</b><i></i></span><span><b>ITFC-D</b><i></i></span><span><b>ITFC-E</b><i></i></span><span><b>ITFC-F</b><i></i></span>
             </div>
             <div class="fallback-row row-it-b">
-              <span>ITFC-M/N</span><span>RPP</span><span>RPP</span><span>RPP</span><span>RPP</span><span>RPP</span>
+              <span><b>ITFC-M/N</b><i></i></span><span><b>RPP</b><i></i></span><span><b>RPP</b><i></i></span><span><b>RPP</b><i></i></span><span><b>RPP</b><i></i></span><span><b>RPP</b><i></i></span>
             </div>
             <div class="fallback-row row-cool">
-              <span>COFC-A</span><span>COFC-B</span><span>COFC-C</span><span>COFC-D</span><span>COFC-E</span><span>COFC-F</span>
+              <span><b>COFC-A</b><i></i></span><span><b>COFC-B</b><i></i></span><span><b>COFC-C</b><i></i></span><span><b>COFC-D</b><i></i></span><span><b>COFC-E</b><i></i></span><span><b>COFC-F</b><i></i></span>
             </div>
             <div class="fallback-row row-power">
-              <span>TRFC-01</span><span>TRFC-02</span><span>HVFC</span><span>BTFC</span><span>PAFC</span>
+              <span><b>TRFC-01</b><i></i></span><span><b>TRFC-02</b><i></i></span><span><b>HVFC</b><i></i></span><span><b>BTFC</b><i></i></span><span><b>PAFC</b><i></i></span>
             </div>
             <div class="fallback-tray tray-main"></div>
             <div class="fallback-tray tray-cross"></div>
           </div>
-          <p>按住拖动可旋转备用 3D 视图；若网络可访问 Three.js，页面会自动切换为更精细的可旋转 3D 场景。</p>
+          <p data-i18n="deployment.fallback">按住拖动可旋转备用 3D 视图；若网络可访问 Three.js，页面会自动切换为更精细的可旋转 3D 场景。</p>
         </div>
         <div class="scene-overlay">
           <div>
@@ -129,18 +134,18 @@
             <span>ITFC · COFC · TRFC · BTFC · PAFC · Cable Tray</span>
           </div>
           <div class="scene-controls" role="group" aria-label="3D 视角控制">
-            <button type="button" data-view="overview">总览</button>
-            <button type="button" data-view="power">电源</button>
-            <button type="button" data-view="it">IT 方舱</button>
-            <button type="button" data-view="cooling">冷却配电</button>
+            <button type="button" data-view="overview" data-i18n="scene.overview">总览</button>
+            <button type="button" data-view="power" data-i18n="scene.power">电源</button>
+            <button type="button" data-view="it" data-i18n="scene.it">IT 方舱</button>
+            <button type="button" data-view="cooling" data-i18n="scene.cooling">冷却配电</button>
           </div>
         </div>
         <div class="scene-legend" aria-label="3D 图例">
-          <span><i class="lg-it"></i>IT 方舱</span>
-          <span><i class="lg-cool"></i>冷却&配电</span>
-          <span><i class="lg-power"></i>变配电</span>
-          <span><i class="lg-battery"></i>锂电/巴拿马</span>
-          <span><i class="lg-tray"></i>桥架</span>
+          <span><i class="lg-it"></i><span data-i18n="legend.it">IT 方舱</span></span>
+          <span><i class="lg-cool"></i><span data-i18n="legend.cooling">冷却&配电</span></span>
+          <span><i class="lg-power"></i><span data-i18n="legend.power">变配电</span></span>
+          <span><i class="lg-battery"></i><span data-i18n="legend.battery">锂电/巴拿马</span></span>
+          <span><i class="lg-tray"></i><span data-i18n="legend.tray">桥架</span></span>
         </div>
       </div>
     </section>
@@ -148,37 +153,37 @@
     <section class="section" id="systems">
       <div class="section-head">
         <div>
-          <p class="eyebrow">强电架构</p>
-          <h2>中压分段、低压分区、末端就近配电</h2>
+          <p class="eyebrow" data-i18n="systems.eyebrow">强电架构</p>
+          <h2 data-i18n="systems.title">中压分段、低压分区、末端就近配电</h2>
         </div>
-        <p>当前方案按数据中心/方舱区强电系统考虑。缺少一次系统图和厂家设备表的部分，统一标记为需要复核。</p>
+        <p data-i18n="systems.desc">当前方案按数据中心/方舱区强电系统考虑。缺少一次系统图和厂家设备表的部分，统一标记为需要复核。</p>
       </div>
       <div class="flow">
         <article>
           <span class="icon">↯</span>
-          <h3>中压入户</h3>
-          <p>由图纸电缆入户点进入中压方舱或中压&辅变方舱，建议按双路或分段方式配置。</p>
+          <h3 data-i18n="flow.mvTitle">中压入户</h3>
+          <p data-i18n="flow.mvDesc">由图纸电缆入户点进入中压方舱或中压&辅变方舱，建议按双路或分段方式配置。</p>
         </article>
         <article>
           <span class="icon">TR</span>
-          <h3>TRFC 变配电</h3>
-          <p>TRFC-01/02 各配置 1600kVA 变压器、AH 柜、TRB 回路、SVG 与直流屏。</p>
+          <h3 data-i18n="flow.trfcTitle">TRFC 变配电</h3>
+          <p data-i18n="flow.trfcDesc">TRFC-01/02 各配置 1600kVA 变压器、AH 柜、TRB 回路、SVG 与直流屏。</p>
         </article>
         <article>
           <span class="icon">LV</span>
-          <h3>低压分区</h3>
-          <p>IT、冷却、控制、储能与辅助电源分柜分回路，关键负荷建议采用 A/B 或 M/N 供电。</p>
+          <h3 data-i18n="flow.lvTitle">低压分区</h3>
+          <p data-i18n="flow.lvDesc">IT、冷却、控制、储能与辅助电源分柜分回路，关键负荷建议采用 A/B 或 M/N 供电。</p>
         </article>
         <article>
           <span class="icon">IT</span>
-          <h3>末端配电</h3>
-          <p>COFC 与 ITFC 就近成组接入，RPP、TMAH、CDU、CRAHB 等设置专用馈线。</p>
+          <h3 data-i18n="flow.endTitle">末端配电</h3>
+          <p data-i18n="flow.endDesc">COFC 与 ITFC 就近成组接入，RPP、TMAH、CDU、CRAHB 等设置专用馈线。</p>
         </article>
       </div>
 
       <div class="split">
         <div class="panel">
-          <h3>已识别设备</h3>
+          <h3 data-i18n="systems.identified">已识别设备</h3>
           <table>
             <thead><tr><th>系统</th><th>图纸识别</th><th>数量</th></tr></thead>
             <tbody>
@@ -192,12 +197,12 @@
           </table>
         </div>
         <div class="panel accent">
-          <h3>设计边界</h3>
+          <h3 data-i18n="systems.boundary">设计边界</h3>
           <ul class="check-list">
-            <li>包含强电接入、桥架、电缆、接地、防火封堵和调试配合。</li>
-            <li>不含供电公司外线、方舱设备本体、厂家成套设备内部接线。</li>
-            <li>UPS/BESS/锂电系统内部设计需由厂家深化。</li>
-            <li>施工图阶段必须复核一次系统图、设备铭牌功率和电缆路由。</li>
+            <li data-i18n="boundary.1">包含强电接入、桥架、电缆、接地、防火封堵和调试配合。</li>
+            <li data-i18n="boundary.2">不含供电公司外线、方舱设备本体、厂家成套设备内部接线。</li>
+            <li data-i18n="boundary.3">UPS/BESS/锂电系统内部设计需由厂家深化。</li>
+            <li data-i18n="boundary.4">施工图阶段必须复核一次系统图、设备铭牌功率和电缆路由。</li>
           </ul>
         </div>
       </div>
@@ -206,20 +211,20 @@
     <section class="section quote-section" id="quote">
       <div class="section-head">
         <div>
-          <p class="eyebrow">报价估算</p>
-          <h2>推荐预算值 2310 万元</h2>
+          <p class="eyebrow" data-i18n="quote.eyebrow">报价估算</p>
+          <h2 data-i18n="quote.title">推荐预算值 2310 万元</h2>
         </div>
-        <p>报价为方案阶段概算口径。切换区间可查看保守值、推荐值和风险高值。</p>
+        <p data-i18n="quote.desc">报价为方案阶段概算口径。切换区间可查看保守值、推荐值和风险高值。</p>
       </div>
 
       <div class="quote-controls" role="group" aria-label="报价区间">
-        <button class="seg active" data-quote="low" type="button">保守低值</button>
-        <button class="seg" data-quote="base" type="button">推荐预算</button>
-        <button class="seg" data-quote="high" type="button">风险高值</button>
+        <button class="seg active" data-quote="low" type="button" data-i18n="quote.low">保守低值</button>
+        <button class="seg" data-quote="base" type="button" data-i18n="quote.base">推荐预算</button>
+        <button class="seg" data-quote="high" type="button" data-i18n="quote.high">风险高值</button>
       </div>
       <div class="quote-visual">
         <div>
-          <span>当前口径</span>
+          <span data-i18n="quote.current">当前口径</span>
           <strong id="quoteValue">2310 万元</strong>
           <p id="quoteNote">推荐用于方案汇报和内部预算控制。</p>
         </div>
@@ -227,7 +232,7 @@
       </div>
 
       <div class="panel">
-        <h3>分项报价</h3>
+        <h3 data-i18n="quote.breakdown">分项报价</h3>
         <table>
           <thead><tr><th>分项</th><th>金额（万元）</th><th>说明</th></tr></thead>
           <tbody>
@@ -251,34 +256,34 @@
     <section class="section" id="confirm">
       <div class="section-head">
         <div>
-          <p class="eyebrow">信息确认</p>
-          <h2>请确认可采用的信息</h2>
+          <p class="eyebrow" data-i18n="confirm.eyebrow">信息确认</p>
+          <h2 data-i18n="confirm.title">请确认可采用的信息</h2>
         </div>
-        <p>点击每项右侧状态，选择“确认”或“需复核”。备注内容会随确认摘要一起导出。</p>
+        <p data-i18n="confirm.desc">点击每项右侧状态，选择“确认”或“需复核”。备注内容会随确认摘要一起导出。</p>
       </div>
 
       <div class="confirmation-layout">
         <div class="confirm-list" id="confirmList" aria-live="polite"></div>
         <aside class="summary-card">
-          <h3>确认摘要</h3>
+          <h3 data-i18n="summary.title">确认摘要</h3>
           <dl>
-            <div><dt>已确认</dt><dd id="summaryConfirmed">0</dd></div>
-            <div><dt>需复核</dt><dd id="summaryReview">0</dd></div>
-            <div><dt>未处理</dt><dd id="summaryOpen">0</dd></div>
+            <div><dt data-i18n="summary.confirmed">已确认</dt><dd id="summaryConfirmed">0</dd></div>
+            <div><dt data-i18n="summary.review">需复核</dt><dd id="summaryReview">0</dd></div>
+            <div><dt data-i18n="summary.open">未处理</dt><dd id="summaryOpen">0</dd></div>
           </dl>
-          <label for="reviewer">确认人</label>
-          <input id="reviewer" name="reviewer" placeholder="填写姓名或单位">
-          <label for="globalNotes">总体备注</label>
-          <textarea id="globalNotes" rows="5" placeholder="例如：待厂家提供一次系统图后锁定电缆规格。"></textarea>
-          <button class="button primary full" id="exportBtn" type="button">导出确认摘要</button>
-          <button class="button secondary full" id="resetBtn" type="button">清空本机状态</button>
+          <label for="reviewer" data-i18n="summary.reviewer">确认人</label>
+          <input id="reviewer" name="reviewer" placeholder="填写姓名或单位" data-i18n-placeholder="summary.reviewerPh">
+          <label for="globalNotes" data-i18n="summary.notes">总体备注</label>
+          <textarea id="globalNotes" rows="5" placeholder="例如：待厂家提供一次系统图后锁定电缆规格。" data-i18n-placeholder="summary.notesPh"></textarea>
+          <button class="button primary full" id="exportBtn" type="button" data-i18n="summary.export">导出确认摘要</button>
+          <button class="button secondary full" id="resetBtn" type="button" data-i18n="summary.reset">清空本机状态</button>
         </aside>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <p>本页面为方案确认用途，最终施工及报价应以一次系统图、厂家资料、现场复核和正式合同为准。</p>
+    <p data-i18n="footer.note">本页面为方案确认用途，最终施工及报价应以一次系统图、厂家资料、现场复核和正式合同为准。</p>
   </footer>
 
   <script src="script.js"></script>
